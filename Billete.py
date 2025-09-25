@@ -3,14 +3,17 @@ from Bus import Bus
 
 class Billete:
 
-    def __init__(self,cantidad=1):
+    def __init__(self,nombre,apellido,cantidad=1):
         self.__NombreYApellido = Persona()
-        self.bus = Bus()
-        self.bus.comprar_plaza(cantidad)
+        self.__NombreYApellido.setNombre(nombre)
+        self.__NombreYApellido.setApellido(apellido)
+        self.__bus = Bus()
+        self.__bus.comprar_plaza(cantidad)
 
-    def set(self,Nombre,Apellido):
-        self.__NombreYApellido.setNombre(Nombre)
-        self.__NombreYApellido.setApellido(Apellido)
+    def __str__(self):
+        self.__NombreYApellido.getNombre()
+        self.__NombreYApellido.getApellido()
+        print(f"La persona con {self.__NombreYApellido.getNombre()} y apellido {self.__NombreYApellido.getApellido()} tiene una plaza")
 
         
 

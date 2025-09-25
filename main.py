@@ -1,23 +1,15 @@
-from Menu import Menu
-from Bus import bus
+from Billete import Billete
 
-Bus1 = bus(100)
 
-compra = Menu()
+def menu():
+        print("<-- Menu de billetes -->")
+        print("1.Comprar un billete")
+        opcion = int(input("Que haces:"))
 
-compra.inicio()
+        if opcion == 1:
+            Nombre = input("Nombre:")
 
-opcion = None
 
-while opcion != 0:
-    compra.mostrar_menu()
-    int(input("Selecciona una opcion: "))
-    if opcion == 1:
-        Bus1.comprar_plaza()
-    elif opcion == 2:
-        Bus1.reembolsar_plazas()
-    elif opcion == 3:
-        Bus1.mostrar_venta()
     
 
 
