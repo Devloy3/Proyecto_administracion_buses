@@ -11,9 +11,12 @@ class Billete:
         self.__bus.comprar_plaza(cantidad)
 
     def __str__(self):
-        self.__NombreYApellido.getNombre()
-        self.__NombreYApellido.getApellido()
-        print(f"La persona con {self.__NombreYApellido.getNombre()} y apellido {self.__NombreYApellido.getApellido()} tiene una plaza")
+        nombre = self.__NombreYApellido.getNombre()
+        apellido = self.__NombreYApellido.getApellido()
+        bus = self.__bus.Getnumero()
+        texto = f"La persona {nombre}{apellido} ha comprado en el bus en {bus} "
+
+        
 
         
 
