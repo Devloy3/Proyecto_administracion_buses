@@ -2,7 +2,7 @@ class Bus:
     def __init__(self,id,plazas):
         self.__plazas = plazas
         self.__Billetes_Vendidos = []
-        self.__numero = id
+        self.__numero = id 
 
     def Setnumero(self,id):
         self.__numero = id
@@ -10,6 +10,12 @@ class Bus:
     def Getnumero(self):
         return self.__numero
     
+    def Setplazas(self,plazas):
+        self.__plazas = plazas
+
+    def Getplazas(self):
+        return self.__plazas
+
     def comprar_plaza(self,cantidad_de_billetes):
             self.__Billetes_Vendidos.append(cantidad_de_billetes)
             plaza_disponibles = self.__plazas - len(self.__Billetes_Vendidos)
@@ -20,7 +26,6 @@ class Bus:
                 texto_2 = f"Quedan {plaza_disponibles} disponibles"
                 return texto_2
     
-        
     def reembolsar_plazas(self):
         self.__Billetes_Vendidos.pop(1)
         plazas_disponibles = self.__plazas + len(self.__Billetes_Vendidos)
