@@ -1,5 +1,3 @@
-from Bus import Bus
-
 class Persona:
     def __init__(self, nombre, apellido):
         self.__nombre = nombre

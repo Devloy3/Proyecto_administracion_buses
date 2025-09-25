@@ -22,16 +22,14 @@ class Bus:
             if plaza_disponibles <= 0:
                 texto = f"No hay plazas"
                 return texto
-            else:
-                texto_2 = f"Quedan {plaza_disponibles} disponibles"
-                return texto_2
+            else:  
+                return plaza_disponibles
     
     def reembolsar_plazas(self):
         self.__Billetes_Vendidos.pop(1)
         plazas_disponibles = self.__plazas + len(self.__Billetes_Vendidos)
         if plazas_disponibles < 100:
-            texto = f"Quedan {plazas_disponibles} plazas"
-            return texto 
+            return plazas_disponibles 
         elif plazas_disponibles == 100:
             texto_2 = f"Estan todas las plazas"
             return texto_2
