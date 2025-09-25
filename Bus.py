@@ -1,4 +1,4 @@
-class bus:
+class Bus:
     def __init__(self):
         self.__plazas = 100
         self.__plaza_disponible = self.__plazas

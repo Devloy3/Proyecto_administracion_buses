@@ -1,16 +1,29 @@
 from Persona import Persona
+from Bus import Bus
 
 class Billete:
 
-    def __init__(self, Nombre, Apellido):
-        self.__NombreYApellido = Persona(Nombre, Apellido)
+    def __init__(self,cantidad=1):
+        self.__NombreYApellido = Persona()
+        self.bus = Bus()
+        self.bus.comprar_plaza(cantidad)
 
-    def setNombre_Y_Apellido(self, nombre, apellido):
-        self.__NombreYApellido.setNombre(nombre)
-        self.__NombreYApellido.setApellido(apellido)
+    def set(self,Nombre,Apellido):
+        self.__NombreYApellido.setNombre(Nombre)
+        self.__NombreYApellido.setApellido(Apellido)
 
-    def getNombre(self):
-        return self.__NombreYApellido.getNombre()
+        
 
-    def getApellido(self):
-        return self.__NombreYApellido.getApellido()
+        
+        
+
+
+
+
+    
+
+
+
+
+
+

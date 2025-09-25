@@ -1,18 +1,22 @@
+from Bus import Bus
+
 class Persona:
     def __init__(self, nombre, apellido):
-        self.nombre = nombre
-        self.apellido = apellido
+        self.__nombre = nombre
+        self.__apellido = apellido
 
-    def setNombre(self, nombre):
-        self.nombre = nombre
+    def setNombre(self,nombre):
+        self.__nombre = nombre
 
     def setApellido(self, apellido):
-        self.apellido = apellido
+        self.__apellido = apellido
 
     def getNombre(self):
-        return self.nombre
+        return self.__nombre
 
     def getApellido(self):
-        return self.apellido
+        return self.__apellido
+    
+
 
 
