@@ -1,24 +1,19 @@
 class Bus:
-    def __init__(self,id,plazas):
+    def __init__(self,numero,plazas):
         self.__plazas = plazas
-        self.__Billetes_Vendidos = []
-        self.__numero = id 
+        self.__numero = numero
+        self.__plazas_ocupadas = []
 
-    def Setnumero(self,id):
-        self.__numero = id
+    def SetBus(self,numero,plazas):
+        self.__numero = numero
+        self.__plazas = plazas
 
-    def Getnumero(self):
-        return self.__numero
+    def GetBus(self):
+        return self.__numero and self.__plazas
     
-    def Setplazas(self,plazas):
-        self.__plazas = plazas
-
-    def Getplazas(self):
-        return self.__plazas
-
-    def comprar_plaza(self,cantidad_de_billetes):
-            self.__Billetes_Vendidos.append(cantidad_de_billetes)
-            plaza_disponibles = self.__plazas - len(self.__Billetes_Vendidos)
+    def asignar_plaza(self,cantidad_de_billetes):
+            self.__plazas_ocupadas.append(cantidad_de_billetes)
+            plaza_disponibles = self.__plazas - len(self.__plazas_ocupadas)
             if plaza_disponibles <= 0:
                 texto = f"No hay plazas"
                 return texto
@@ -26,8 +21,8 @@ class Bus:
                 return plaza_disponibles
     
     def reembolsar_plazas(self):
-        self.__Billetes_Vendidos.pop(1)
-        plazas_disponibles = self.__plazas + len(self.__Billetes_Vendidos)
+        self.__plazas_ocupadas.pop(1)
+        plazas_disponibles = self.__plazas + len(self.__plazas_ocupadas)
         if plazas_disponibles < 100:
             return plazas_disponibles 
         elif plazas_disponibles == 100:

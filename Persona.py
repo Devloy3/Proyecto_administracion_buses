@@ -3,17 +3,12 @@ class Persona:
         self.__nombre = nombre
         self.__apellido = apellido
 
-    def setNombre(self,nombre):
+    def setPersona(self,nombre,apellido):
         self.__nombre = nombre
-
-    def setApellido(self, apellido):
         self.__apellido = apellido
 
-    def getNombre(self):
-        return self.__nombre
-
-    def getApellido(self):
-        return self.__apellido
+    def getPersona(self):
+        return self.__nombre and self.__apellido
     
 
 
